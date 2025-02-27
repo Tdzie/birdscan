@@ -62,7 +62,7 @@ class BirdList {
             let hasSeen = seenBirdsSet.has(cleanedBirdName);
 
             // Apply different styles
-            birdItem.innerHTML = `<strong style="color: ${hasSeen ? 'black' : 'red'}">${bird.name}</strong> - Count: ${bird.howMany}`;
+            birdItem.innerHTML = `<strong style="color: ${hasSeen ? 'black' : 'darkred'}">${bird.name}</strong> - Count: ${bird.howMany}`;
 
             birdList.appendChild(birdItem);
         });

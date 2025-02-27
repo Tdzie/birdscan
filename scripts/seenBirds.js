@@ -305,6 +305,6 @@ const birdsSeen = {
         "Passerina cyanea",
         "Passerina ciris",
         "Spiza americana",
-        "Accipiter cooperii"
+        "Astur cooperii"
     ]
 };

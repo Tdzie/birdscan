@@ -47,7 +47,7 @@ window.onload = function() {
         button.innerText = location.name;
         button.value = location.id;
         button.type = 'button';
-        button.classList.add('btn', 'btn-primary');
+        button.classList.add('btn', 'btn-outline-info');
         button.addEventListener('click', function() {
             fetchEbirdData(location.id);
         });

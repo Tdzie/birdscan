@@ -9,7 +9,7 @@
     margin-top: 20px;
     flex-direction: column;
     gap: 10px;
-
+    align-items: center;
   }
   
   .button {
@@ -26,14 +26,20 @@
   }
 
 
-
+#bird_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
 
   .bird-group {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    background: #f9f9f9;
+    background: #898686;
 }
 
 .group-header {
@@ -57,3 +63,20 @@ ul {
 hr{
     margin: 0px;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3f3c3c;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+button{
+    width: 90%;
+}
+
