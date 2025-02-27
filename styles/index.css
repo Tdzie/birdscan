@@ -58,6 +58,7 @@ ul {
     list-style-type: none; /* Removes bullet points */
     padding: 0; /* Removes default padding */
     margin: 0; /* Removes default margin */
+    width: 90%;
 }
 
 hr{
@@ -91,3 +92,4 @@ footer{
     align-items: center;
 }
   
+#location_selection_menu {}

@@ -35,14 +35,14 @@ async function fetchEbirdData(locationId) {
 function displayBirds() {
 birdContainer.innerHTML = '';
   birdContainer.appendChild(birdList.getBirdsGroup());
+  birdContainer.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 
-
-
-
-window.onload = function() {
-    locationData.locations.forEach((location) => {
+function load_locations(name) {
+    const button_container =document.querySelector('#button_container')
+    button_container.innerHTML = '';
+    locationData[name].forEach((location) => {
         let button = document.createElement('button');
         button.innerText = location.name;
         button.value = location.id;
@@ -51,6 +51,23 @@ window.onload = function() {
         button.addEventListener('click', function() {
             fetchEbirdData(location.id);
         });
-        document.querySelector('#button_container').appendChild(button);
+        button_container.appendChild(button);
+        
+
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    handleLocationChange();
+});
+
+
+const locationMenu = document.getElementById("location_selection_menu");
+
+function handleLocationChange() {
+    const selectedValue = locationMenu.value;
+    load_locations(selectedValue);
+}
+
+locationMenu.addEventListener("change", handleLocationChange);
