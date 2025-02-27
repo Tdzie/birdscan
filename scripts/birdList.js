@@ -44,7 +44,7 @@ class BirdList {
         section.innerHTML = `
         <div class="bird-group">
           <div class="group-header">
-            <strong>${location}</strong> - <span>${date}</span>
+            <strong>${location}</strong> <hr> <span style="font-weight: normal">${date} </span><hr>
           </div>
           <ul class="bird-list"></ul>
         </div>`;
