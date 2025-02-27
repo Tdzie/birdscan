@@ -2,11 +2,15 @@ const locationData = {
     "locations": [
         {
             "name": "Dauphin Island - Top 10 Hotspots",
-            "id": "L166463,L724996,L725009,L725014,L725012,L724990,L3086944,L923371,L4813791,L2584608"
+            "id": "L166463,L724996,L725009,L725014,L725012,L724990,L3086944,L923371,L4813791,L883243"
         },
         {
             "name": "Shell Mound Park",
             "id": "L724996"
+        },
+        {
+            "name": "Goat Tree",
+            "id": "L883243"
         },
         {
             "name": "Dauphin Island Center Location",

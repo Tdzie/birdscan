@@ -81,11 +81,13 @@ button{
 }
 
 footer{
-
+    display: flex;
+    flex-direction: column;
     color: white;
     text-align: center;
     padding: 10px;
     bottom: 0;
     width: 100%;
+    align-items: center;
 }
   
