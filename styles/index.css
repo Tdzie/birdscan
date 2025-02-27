@@ -80,3 +80,12 @@ button{
     width: 90%;
 }
 
+footer{
+
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+  
