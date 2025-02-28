@@ -14,7 +14,7 @@ class BirdList {
       return a.date < b.date ? 1 : -1;
     });
   } 
-/**
+
   
   getBirdsGroup() {
     this.sortBirds();
@@ -74,7 +74,7 @@ class BirdList {
     return unorderedList;
 
 }
-**/
+/**
 getBirdsGroup() {
     this.sortBirds();
 
@@ -144,6 +144,7 @@ getBirdsGroup() {
 
     return unorderedList;
 }
+**/
   getBirds() {
     this.sortBirds();
 
