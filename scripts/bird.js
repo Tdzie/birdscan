@@ -1,11 +1,15 @@
 class Bird {
-  constructor(comName,sciName, locationId, howMany, date, locationName) {
+  constructor(comName,sciName, locationId, howMany, date, locationName, subId,speciesCode, lat, lng) {
     this.name = comName;
     this.sciName = sciName;
     this.locationId = locationId;
     this.locationName = locationName;
     this.howMany = howMany;
     this.date = date;
+    this.subId = subId;
+    this.speciesCode = speciesCode;
+    this.lat = lat;
+    this.lng = lng;
     this.uniqueIdentifier = `${this.name}-${this.locationId}-${this.date}`;
   }
 
