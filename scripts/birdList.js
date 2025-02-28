@@ -14,7 +14,8 @@ class BirdList {
       return a.date < b.date ? 1 : -1;
     });
   } 
-
+/**
+  
   getBirdsGroup() {
     this.sortBirds();
 
@@ -73,8 +74,76 @@ class BirdList {
     return unorderedList;
 
 }
+**/
+getBirdsGroup() {
+    this.sortBirds();
 
+    let unorderedList = document.createElement('ul');
+    let groupedData = {};
 
+    // Group birds first by location, then by date/time
+    this.birds.forEach((bird) => {
+        let formattedDate = this.formatTimestamp(bird.date);
+        let locationKey = bird.locationName;
+
+        if (!groupedData[locationKey]) {
+            groupedData[locationKey] = {};
+        }
+        
+        if (!groupedData[locationKey][formattedDate]) {
+            groupedData[locationKey][formattedDate] = [];
+        }
+
+        groupedData[locationKey][formattedDate].push(bird);
+    });
+
+    // Convert the list of seen birds to a Set for faster lookup (with cleaned names)
+    const seenBirdsSet = new Set(birdsSeen["Cappa"].map(name => name.trim().toLowerCase()));
+
+    // Create elements for each location group
+    Object.keys(groupedData).forEach((location) => {
+        let locationSection = document.createElement('li');
+        locationSection.innerHTML = `
+        <div class="bird-group">
+          <div class="group-header">
+            <strong>${location}</strong>
+          </div>
+          <ul class="date-list"></ul>
+        </div>`;
+
+        let dateList = locationSection.querySelector('.date-list');
+
+        // Add each date/time under the location
+        Object.keys(groupedData[location]).forEach((date) => {
+            let dateSection = document.createElement('li');
+            dateSection.innerHTML = `
+            <div class="date-group">
+              <span style="font-weight: normal">${date}</span><hr>
+              <ul class="bird-list"></ul>
+            </div>`;
+
+            let birdList = dateSection.querySelector('.bird-list');
+
+            // Add birds for the specific date/time
+            groupedData[location][date].forEach((bird) => {
+                let birdItem = document.createElement('li');
+
+                let cleanedBirdName = bird.sciName.trim().toLowerCase();
+                let hasSeen = seenBirdsSet.has(cleanedBirdName);
+
+                birdItem.innerHTML = `<strong style="color: ${hasSeen ? 'black' : 'darkred'}">${bird.name}</strong> - Count: ${bird.howMany}`;
+
+                birdList.appendChild(birdItem);
+            });
+
+            dateList.appendChild(dateSection);
+        });
+
+        unorderedList.appendChild(locationSection);
+    });
+
+    return unorderedList;
+}
   getBirds() {
     this.sortBirds();
 
