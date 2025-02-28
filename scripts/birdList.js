@@ -92,4 +92,33 @@ class BirdList {
 
     return unorderedList;
   }
+
+  formatTimestamp(timestamp) {
+    const date = new Date(timestamp);
+    const now = new Date();
+    
+    // Get today's and yesterday's dates without time
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 1);
+
+    // Format time in 12-hour format with AM/PM
+    let hours = date.getHours();
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const amPm = hours >= 12 ? 'PM' : 'AM';s
+    hours = hours % 12 || 12; // Convert 0 to 12-hour format
+
+    const timeString = `${hours}:${minutes} ${amPm}`;
+
+    // Determine if it's today, yesterday, or an older date
+    const dateOnly = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+    if (dateOnly.getTime() === today.getTime()) {
+        return `Today - ${timeString}`;
+    } else if (dateOnly.getTime() === yesterday.getTime()) {
+        return `Yesterday - ${timeString}`;
+    } else {
+        return `${date.toLocaleDateString()} - ${timeString}`;
+    }
+}
 }
