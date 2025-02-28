@@ -80,7 +80,7 @@ class BirdList {
         // Insert the bird name with the clickable map link and apply styles based on whether the bird was seen
         birdItem.innerHTML = `
           <a href="${customLink}" target="_blank" style="text-decoration: none;">
-            <strong style="color: ${hasSeen ? 'black' : 'darkred'}">${bird.name}</strong> -  style="color: black"<span>${bird.howMany}</span>
+            <strong style="color: ${hasSeen ? 'black' : 'darkred'}">${bird.name}</strong> - <span style="color: black">${bird.howMany}</span>
           </a>
         `;
 
