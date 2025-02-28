@@ -51,7 +51,7 @@ class BirdList {
             <hr> 
             <span style="font-weight: normal">${date}</span>
             <hr>
-            <button style="btn btn-outline-info" onclick="window.open('${linkToEbird}', '_blank')">List on EBird</button>
+            <button type="button" style="btn btn-outline-info" onclick="window.open('${linkToEbird}', '_blank')">List on EBird</button>
           </div>
           <ul class="bird-list"></ul>
         </div>`;
