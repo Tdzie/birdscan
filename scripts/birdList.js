@@ -51,7 +51,7 @@ class BirdList {
             <hr> 
             <span style="font-weight: normal">${date}</span>
             <hr>
-            <button style="flex: 1;" onclick="window.open('${linkToEbird}', '_blank')">List on EBird</button>
+            <button style="btn btn-outline-info" onclick="window.open('${linkToEbird}', '_blank')">List on EBird</button>
           </div>
           <ul class="bird-list"></ul>
         </div>`;
@@ -80,7 +80,7 @@ class BirdList {
         // Insert the bird name with the clickable map link and apply styles based on whether the bird was seen
         birdItem.innerHTML = `
           <a href="${customLink}" target="_blank" style="text-decoration: none;">
-            <strong style="color: ${hasSeen ? 'black' : 'darkred'}">${bird.name}</strong> - Count: ${bird.howMany}
+            <strong style="color: ${hasSeen ? 'black' : 'darkred'}">${bird.name}</strong> -  style="color: black"<span>${bird.howMany}</span>
           </a>
         `;
 
