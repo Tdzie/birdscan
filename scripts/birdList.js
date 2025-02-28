@@ -105,7 +105,7 @@ class BirdList {
     // Format time in 12-hour format with AM/PM
     let hours = date.getHours();
     const minutes = date.getMinutes().toString().padStart(2, '0');
-    const amPm = hours >= 12 ? 'PM' : 'AM';s
+    const amPm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12 || 12; // Convert 0 to 12-hour format
 
     const timeString = `${hours}:${minutes} ${amPm}`;
