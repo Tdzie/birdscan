@@ -90,6 +90,7 @@ footer{
     bottom: 0;
     width: 100%;
     align-items: center;
+    position: fixed;
 }
   
 #location_selection_menu {}
