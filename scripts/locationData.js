@@ -151,6 +151,10 @@ const locationData = {
         {
             "name": "North Field and Pool",
             "id": "L1444820"
+        },
+        {
+            "name": "Salisbury",
+            "id": "L129076"
         }
 
         ]
