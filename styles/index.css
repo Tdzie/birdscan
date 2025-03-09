@@ -91,6 +91,7 @@ footer{
     width: 100%;
     align-items: center;
     position: fixed;
+    background-color: #3f3c3c;
 }
   
 #location_selection_menu {}
