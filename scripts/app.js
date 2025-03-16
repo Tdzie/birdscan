@@ -19,7 +19,7 @@ async function fetchEbirdData(locationId) {
     try {
         const response = await fetch(`https://api.ebird.org/v2/data/obs/AL/recent?includeProvisional=true&r=${locationId}`, requestOptions);
         const eBirdData = await response.json();
-        birdList = new BirdList();
+        birdList = new birdList();
 
         eBirdData.forEach((bird) => {
             birdList.addBird(bird);
