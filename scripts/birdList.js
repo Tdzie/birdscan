@@ -1,19 +1,18 @@
-
 class BirdList {
   constructor() {
     this.birds = [];
   }
 
   addBird(bird) {
-
-    let newBird = new Bird(bird.comName, bird.sciName, bird.locId, bird.howMany, bird.obsDt, bird.locName);
+    let newBird = new Bird(bird.comName, bird.sciName, bird.locId, bird.howMany, bird.obsDt, bird.locName, bird.subId, bird.speciesCode, bird.lat, bird.lng);
     this.birds.push(newBird);
   }
+
   sortBirds() {
     this.birds.sort((a, b) => {
       return a.date < b.date ? 1 : -1;
     });
-  } 
+  }
 
   getBirdsGroup() {
     this.sortBirds();
@@ -38,16 +37,23 @@ class BirdList {
     // Create elements for each group
     Object.keys(groupedData).forEach((key) => {
         let [date, location] = key.split(" | ");
+        let firstBird = groupedData[key][0]; // The first bird of the group, for the checklist link
+
+        // Create the EBird checklist link using the subId of the first bird
+        let linkToEbird = `https://ebird.org/checklist/${firstBird.subId}`;
 
         // Create a section for each group
         let section = document.createElement('li');
         section.innerHTML = `
-        <div class="bird-group">
-          <div class="group-header">
-            <strong>${location}</strong> <hr> <span style="font-weight: normal">${date} </span><hr>
-          </div>
-          <ul class="bird-list"></ul>
-        </div>`;
+            <div class="bird-group">
+                <div class="group-header">
+                    <strong>${location}</strong>
+                    <hr> 
+                    <span style="font-weight: normal; cursor: pointer; text-decoration: underline;" onclick="window.open('${linkToEbird}', '_blank')">${date}</span>
+                    <hr>
+                </div>
+                <ul class="bird-list"></ul>
+            </div>`;
 
         let birdList = section.querySelector('.bird-list');
 
@@ -61,8 +67,21 @@ class BirdList {
             // Check if the cleaned name exists in the seen birds list
             let hasSeen = seenBirdsSet.has(cleanedBirdName);
 
-            // Apply different styles
-            birdItem.innerHTML = `<strong style="color: ${hasSeen ? 'black' : 'darkred'}">${bird.name}</strong> - Count: ${bird.howMany}`;
+            // Calculate the environment bounds for the bird map link
+            let envminX = bird.lng - 0.2;
+            let envmaxX = bird.lng + 0.2;
+            let envminY = bird.lat - 0.2;
+            let envmaxY = bird.lat + 0.2;
+
+            // Create a clickable link for the bird map
+            let customLink = `https://ebird.org/map/${bird.speciesCode}?neg=true&env.minX=${envminX}&env.minY=${envminY}&env.maxX=${envmaxX}&env.maxY=${envmaxY}&zh=true&gp=true&ev=Z&excludeExX=false&excludeExAll=false&mr=1-12&bmo=1&emo=12&yr=cur&byr=2023&eyr=2023#more-map-options`;
+
+            // Insert the bird name with the clickable map link and apply styles based on whether the bird was seen
+            birdItem.innerHTML = `
+                <a href="${customLink}" target="_blank" style="text-decoration: none;">
+                    <strong style="color: ${hasSeen ? 'black' : 'darkred'}">${bird.name}</strong> <span style="color: black"> - ${bird.howMany}</span>
+                </a>
+            `;
 
             birdList.appendChild(birdItem);
         });
@@ -71,29 +90,7 @@ class BirdList {
     });
 
     return unorderedList;
-
 }
-
-
-  getBirds() {
-    this.sortBirds();
-
-    let unorderedList = document.createElement('ul');
-
-    this.birds.forEach((bird) => {
-    let listItem = document.createElement('li');
-    listItem.innerHTML = `
-    <div class="bird-info">
-      <strong>${bird.name} - ${bird.howMany}</strong>
-      <span>${bird.locationName}</span>
-      <span>${this.formatTimestamp(bird.date)}</span>
-    </div>`;
-  
-    unorderedList.appendChild(listItem);
-    });
-    return unorderedList;
-
-  }
 
   formatTimestamp(timestamp) {
     const date = new Date(timestamp);
@@ -123,5 +120,4 @@ class BirdList {
         return `${date.toLocaleDateString()} - ${timeString}`;
     }
 }
-
 }

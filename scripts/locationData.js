@@ -50,11 +50,11 @@ const locationData = {
         },
         {
             "name": "Fort Morgan",
-            "id": "L164792"
+            "id": "L165792"
         },
         {
             "name": "Fort Morgan - All Hotspots",
-            "id": "L164791,L2687357,L1286702,L1032547,L934114,L4061500,L30747785"
+            "id": "L165792,L2687357,L1286702,L1032547,L934114,L4061500,L30747785"
         }
             
         ],
@@ -151,6 +151,10 @@ const locationData = {
         {
             "name": "North Field and Pool",
             "id": "L1444820"
+        },
+        {
+            "name": "Salisbury",
+            "id": "L129076"
         }
 
         ]
