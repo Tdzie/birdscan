@@ -261,5 +261,20 @@ const locationData = {
             "id": "L109233"
         }
     ],
+    "Bluff Point":
+    [
+        {
+            "name": "Bluff Point - All Hotspots",
+            "id": "L109240,L1111208"
+        },
+        {
+            "name": "Bluff Point",
+            "id": "L109240"
+        },
+        {
+            "name": "Bluff Point - Hot Corner (Fall Migration)",
+            "id": "L1111208"
+        }
+    ],
 }
 
