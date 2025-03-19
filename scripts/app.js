@@ -70,4 +70,14 @@ function handleLocationChange() {
     load_locations(selectedValue);
 }
 
+function create_select_option() {
+    locationData.forEach((location) => {
+        locationMenu.appendChild(createOption(location.id, location.name));
+    });
+    let option = document.createElement("option");
+    option.value = value;
+    option.text = text;
+    return option;
+}
+
 locationMenu.addEventListener("change", handleLocationChange);
