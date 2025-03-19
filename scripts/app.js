@@ -59,6 +59,7 @@ function load_locations(name) {
 
 
 document.addEventListener("DOMContentLoaded", function() {
+    load_locations_in_select();
     handleLocationChange();
 });
 
@@ -70,14 +71,13 @@ function handleLocationChange() {
     load_locations(selectedValue);
 }
 
-function create_select_option() {
-    locationData.forEach((location) => {
-        locationMenu.appendChild(createOption(location.id, location.name));
-    });
-    let option = document.createElement("option");
-    option.value = value;
-    option.text = text;
-    return option;
+function load_locations_in_select() {
+    for (const location in locationData) {
+        let option = document.createElement('option');
+        option.value = location;
+        option.innerText = location;
+        locationMenu.appendChild(option);
+    }
 }
 
 locationMenu.addEventListener("change", handleLocationChange);

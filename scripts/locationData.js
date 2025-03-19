@@ -1,5 +1,5 @@
 const locationData = {
-    "dauphin_island": [
+    "Dauphin Island": [
         {
             "name": "Dauphin Island - Top 10 Hotspots",
             "id": "L166463,L724996,L725009,L725014,L725012,L724990,L3086944,L923371,L4813791,L883243"
@@ -59,7 +59,7 @@ const locationData = {
             
         ],
 
-    "plum_island": [
+    "Plum Island": [
         {
             "name": "Plum Island - Top 10 Hotspots",
             "id": "L830335,L444827,L129046,L444818,L936733,L2774775,L129047,L259782,L129045,L129084"
@@ -156,6 +156,69 @@ const locationData = {
             "name": "Salisbury",
             "id": "L129076"
         }
+
+        ],
+        "Hammonasset" : [
+            {
+                "name": "Hammonasset - Top 10 Hotspots",
+                "id": "L298379,L298379,L812183,L109205,L294440,L1880516,L109204,L794486,L109206,L2508684,L3189438"
+            },
+            {
+                "name": "Hammonasset - Top Half",
+                "id": "L812183,L109205,L294440,L298379,L794486"    
+            },
+            {
+                "name": "Hammonasset - Bottom Half",
+                "id": "L1156157,L109206,L2325993,L3189438,L2508684,L109204,L1880516"    
+            },
+            {
+                "name": "Hammonasset Beach SP (main location)",
+                "id": "L298379"
+            },
+            {
+                "name": "Campground",
+                "id": "L812183"    
+            },
+            {
+                "name": "West End",
+                "id": "L109205"    
+            },
+            {
+                "name": "Pond by Rotary",
+                "id": "L294440"    
+            },
+            {
+                "name": "Meig's Point Parking lot/Marsh",
+                "id": "L1880516"    
+            },
+            {
+                "name": "Meig's Point",
+                "id": "L109204"    
+            },
+            {
+                "name": "East Beach Pavilion",
+                "id": "L794486"    
+            },
+            {
+                "name": "Willard Island",
+                "id": "L109206"    
+            },
+            {
+                "name": "Cedar Island Trail",
+                "id": "L2508684"    
+            },
+            {
+                "name": "Moraine Trail",
+                "id": "L3189438"    
+            },
+            {
+                "name": "Boulder Pond",
+                "id": "L2325993"    
+            },
+            {
+                "name": "Morning Flight viewpoint (marsh)",
+                "id": "L1156157"    
+            }
 
         ]
 }
