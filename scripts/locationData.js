@@ -245,7 +245,21 @@ const locationData = {
             "name": "Stratford point",
             "id": "L611064"
         }
-        
-    ]
+    ],
+    "Lighthouse/Sandy Point (New Haven)":
+    [
+        {
+            "name": "Both locations",
+            "id": "L109209,L109233"
+        },
+        {
+            "name": "Lighthouse Point Park",
+            "id": "L109209"
+        },
+        {
+            "name": "Sandy Point",
+            "id": "L109233"
+        }
+    ],
 }
 
