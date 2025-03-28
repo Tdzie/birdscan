@@ -56,7 +56,11 @@ const locationData = {
         {
             "name": "Fort Morgan - All Hotspots",
             "id": "L165792,L2687357,L1286702,L1032547,L934114,L4061500,L30747785"
-        }  
+        },
+        {
+            "name": "Bellingrath Gardens",
+            "id": "L1487156"
+        }
     ],
     "Plum Island": 
     [
@@ -155,10 +159,6 @@ const locationData = {
         {
             "name": "Salisbury",
             "id": "L129076"
-        },
-        {
-            "name": "Bellingrath Gardens",
-            "id": "L1487156"
         }
     ],
     "Hammonasset" : 
