@@ -155,6 +155,10 @@ const locationData = {
         {
             "name": "Salisbury",
             "id": "L129076"
+        },
+        {
+            "name": "Bellingrath Gardens",
+            "id": "L1487156"
         }
     ],
     "Hammonasset" : 
