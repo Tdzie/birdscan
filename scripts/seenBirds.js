@@ -312,6 +312,6 @@ const birdsSeen = {
         "Poecile carolinensis",
         "Ardea ibis",
         "Petrochelidon pyrrhonota",
-        "Tyto alba"
+        "Tyto furcata"
     ]
 };
