@@ -307,6 +307,10 @@ const birdsSeen = {
         "Spiza americana",
         "Astur cooperii",
         "Larus smithsonianus",
-        "Podiceps grisegena"
+        "Podiceps grisegena",
+        "Plegadis chihi",
+        "Poecile carolinensis",
+        "Bubulcus ibis",
+        "Petrochelidon pyrrhonota"
     ]
 };
