@@ -310,7 +310,7 @@ const birdsSeen = {
         "Podiceps grisegena",
         "Plegadis chihi",
         "Poecile carolinensis",
-        "Bubulcus ibis",
+        "Ardea ibis",
         "Petrochelidon pyrrhonota",
         "Tyto alba"
     ]
