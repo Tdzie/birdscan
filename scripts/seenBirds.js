@@ -311,6 +311,7 @@ const birdsSeen = {
         "Plegadis chihi",
         "Poecile carolinensis",
         "Bubulcus ibis",
-        "Petrochelidon pyrrhonota"
+        "Petrochelidon pyrrhonota",
+        "Tyto alba"
     ]
 };
