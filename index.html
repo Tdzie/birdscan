@@ -10,7 +10,7 @@
     <script src="scripts/locationData.js"></script>
     <script src="scripts/bird.js"></script>
     <script src="scripts/birdList.js"></script>
-    <link rel="stylesheet" href="styles/index.css?v=1.1"">
+    <link rel="stylesheet" href="styles/index.css?v=1.1">
 </head>
 <body>
     <header>
@@ -29,8 +29,156 @@
         <div id="bird_container">
         
         </div>
+
+        <div id="loader" class="hidden">
+            <svg id="scene" viewBox="0 0 1500 300" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <!-- Main bird flight path -->
+                <path id="mainPath" d="M -100,150 C 300,50, 800,250, 1500,150" />
+                <!-- Small birds flight paths (slightly varied) -->
+                <path id="smallPath1" d="M -100,170 C 300,80, 800,220, 1500,160" />
+                <path id="smallPath2" d="M -100,130 C 300,20, 800,280, 1500,140" />
+                <path id="smallPath3" d="M -100,190 C 300,100, 800,200, 1500,180" />
+                <path id="smallPath4" d="M -100,110 C 300,0, 800,300, 1500,120" />
+                <path id="smallPath5" d="M -100,150 C 300,60, 800,240, 1500,150" />
+              </defs>
+              
+              <!-- Background Elements -->
+              <!-- Sky -->
+              <rect x="0" y="0" width="1500" height="300" fill="skyblue" />
+              <!-- Clouds -->
+              <g id="clouds">
+                <ellipse cx="300" cy="50" rx="60" ry="20" fill="#fff" opacity="0.8">
+                  <animate attributeName="cx" values="300;310;300" dur="10s" repeatCount="indefinite"/>
+                </ellipse>
+                <ellipse cx="800" cy="70" rx="50" ry="15" fill="#fff" opacity="0.8">
+                  <animate attributeName="cx" values="800;810;800" dur="12s" repeatCount="indefinite"/>
+                </ellipse>
+                <ellipse cx="1200" cy="40" rx="70" ry="25" fill="#fff" opacity="0.8">
+                  <animate attributeName="cx" values="1200;1210;1200" dur="15s" repeatCount="indefinite"/>
+                </ellipse>
+              </g>
+              <!-- Ground -->
+              <rect x="0" y="250" width="1500" height="50" fill="lightgreen"/>
+              <!-- Trees -->
+              <g id="trees">
+                <g transform="translate(150,250)">
+                  <rect x="-5" y="0" width="10" height="20" fill="#8B4513"/>
+                  <polygon points="-15,0 0,-30 15,0" fill="#228B22"/>
+                </g>
+                <g transform="translate(600,250)">
+                  <rect x="-5" y="0" width="10" height="20" fill="#8B4513"/>
+                  <polygon points="-15,0 0,-35 15,0" fill="#228B22"/>
+                </g>
+                <g transform="translate(1050,250)">
+                  <rect x="-5" y="0" width="10" height="20" fill="#8B4513"/>
+                  <polygon points="-15,0 0,-25 15,0" fill="#228B22"/>
+                </g>
+              </g>
+          
+              <!-- Main Bird -->
+              <g id="mainBird" transform="translate(0,0)">
+                <!-- Body shifted upward -->
+                <ellipse cx="0" cy="-5" rx="25" ry="15" fill="#2c3e50" />
+                
+                <!-- Left Wing with flapping animation -->
+                <path d="M -5,-5 Q -25,-45, -45,-5" stroke="#2c3e50" stroke-width="2" fill="none">
+                  <animate attributeName="d" dur="0.8s" repeatCount="indefinite"
+                    values="
+                      M -5,-5 Q -25,-45, -45,-5;
+                      M -5,-5 Q -15,-35, -50,-37;
+                      M -5,-5 Q -25,-45, -45,-5" />
+                </path>
+                <!-- Right (Mirrored) Wing with flapping animation -->
+                <path d="M 5,-5 Q 25,-45, 45,-5" stroke="#2c3e50" stroke-width="2" fill="none">
+                  <animate attributeName="d" dur="0.8s" repeatCount="indefinite"
+                    values="
+                      M 5,-5 Q 25,-45, 45,-5;
+                      M 5,-5 Q 15,-35, 50,-37;
+                      M 5,-5 Q 25,-45, 45,-5" />
+                </path>
+                
+                <!-- Tail shifted upward -->
+                <polygon points="25,-5 40,0 25,5" fill="#2c3e50" />
+                <!-- Beak adjusted upward -->
+                <polygon points="-25,-5 -35,-10 -35,0" fill="#f39c12" />
+              </g>
+              <animateMotion xlink:href="#mainBird" dur="8s" repeatCount="indefinite" rotate="auto">
+                <mpath xlink:href="#mainPath"/>
+              </animateMotion>
+              
+              <!-- Small Birds Template -->
+              <g id="smallBirdTemplate">
+                <!-- Body shifted upward -->
+                <ellipse cx="0" cy="-3" rx="15" ry="9" fill="#34495e" />
+                <!-- Small beak -->
+                <polygon points="-15,-3 -20,-8 -20,-2" fill="#f39c12" />
+                
+                <!-- Left Wing with flapping animation -->
+                <path d="M -3,-3 Q -15,-23, -27,-3" stroke="#34495e" stroke-width="1.5" fill="none">
+                  <animate attributeName="d" dur="1s" repeatCount="indefinite"
+                    values="
+                      M -3,-3 Q -15,-23, -27,-3;
+                      M -3,-3 Q -10,-30, -30,-20;
+                      M -3,-3 Q -15,-23, -27,-3" />
+                </path>
+                <!-- Right (Mirrored) Wing with flapping animation -->
+                <path d="M 3,-3 Q 15,-23, 27,-3" stroke="#34495e" stroke-width="1.5" fill="none">
+                  <animate attributeName="d" dur="1s" repeatCount="indefinite"
+                    values="
+                      M 3,-3 Q 15,-23, 27,-3;
+                      M 3,-3 Q 10,-30, 30,-20;
+                      M 3,-3 Q 15,-23, 27,-3" />
+                </path>
+                
+                <!-- Tail shifted upward -->
+                <polygon points="15,-3 25,0 15,3" fill="#34495e" />
+              </g>
+              
+              <!-- Instantiate 5 small birds with slight variations -->
+              <g id="smallBird1" transform="scale(0.8)">
+                <use xlink:href="#smallBirdTemplate" />
+              </g>
+              <animateMotion xlink:href="#smallBird1" dur="8s" begin="0.5s" repeatCount="indefinite" rotate="auto">
+                <mpath xlink:href="#smallPath1"/>
+              </animateMotion>
+              
+              <g id="smallBird2" transform="scale(0.85)">
+                <use xlink:href="#smallBirdTemplate" />
+              </g>
+              <animateMotion xlink:href="#smallBird2" dur="8s" begin="1s" repeatCount="indefinite" rotate="auto">
+                <mpath xlink:href="#smallPath2"/>
+              </animateMotion>
+              
+              <g id="smallBird3" transform="scale(0.75)">
+                <use xlink:href="#smallBirdTemplate" />
+              </g>
+              <animateMotion xlink:href="#smallBird3" dur="8s" begin="1.5s" repeatCount="indefinite" rotate="auto">
+                <mpath xlink:href="#smallPath3"/>
+              </animateMotion>
+              
+              <g id="smallBird4" transform="scale(0.8)">
+                <use xlink:href="#smallBirdTemplate" />
+              </g>
+              <animateMotion xlink:href="#smallBird4" dur="8s" begin="2s" repeatCount="indefinite" rotate="auto">
+                <mpath xlink:href="#smallPath4"/>
+              </animateMotion>
+              
+              <g id="smallBird5" transform="scale(0.9)">
+                <use xlink:href="#smallBirdTemplate" />
+              </g>
+              <animateMotion xlink:href="#smallBird5" dur="8s" begin="2.5s" repeatCount="indefinite" rotate="auto">
+                <mpath xlink:href="#smallPath5"/>
+              </animateMotion>
+            </svg>
+          </div>
+          
+          
+          
     </main>
-    <footer>
+
+      
+    <footer id="footer" class="text-center mt-4">
         <button type="button" class="btn btn-secondary" id="back_to_top_button">Back to Top</button>
         <p>&copy; 2025 Bird Scanner. All rights reserved.</p>
     </footer>
