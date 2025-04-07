@@ -22,9 +22,11 @@ async function fetchEbirdData(locationId) {
     try {
 
         loader.classList.remove("hidden"); // Show "Processing..."
-        //await delay(3000); // Simulate a delay for the loader
+        
         const response = await fetch(`https://api.ebird.org/v2/data/obs/AL/recent?includeProvisional=true&r=${locationId}`, requestOptions);
+        await delay(500); // Simulate a delay for the loader
         const eBirdData = await response.json();
+        
         birdList = new BirdList();
     
         eBirdData.forEach((bird) => {
