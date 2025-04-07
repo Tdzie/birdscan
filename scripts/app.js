@@ -18,10 +18,11 @@ document.querySelector('#back_to_top_button').addEventListener('click', function
 });
 
 async function fetchEbirdData(locationId) {
-    const loader = document.getElementById("loader");
+    //const loader = document.getElementById("loader");
+    const spinner = document.querySelector('#spinner');
     try {
 
-        loader.classList.remove("hidden"); // Show "Processing..."
+        spinner.classList.remove("hidden"); // Show "Processing..."
         //await delay(3000); // Simulate a delay for the loader
         const response = await fetch(`https://api.ebird.org/v2/data/obs/AL/recent?includeProvisional=true&r=${locationId}`, requestOptions);
         const eBirdData = await response.json();
@@ -35,7 +36,7 @@ async function fetchEbirdData(locationId) {
     } catch (error) {
         console.error("Error fetching bird data:", error);
     }finally {
-        loader.classList.add("hidden"); // Always hide loader, even if there's an error
+        spinner.classList.add("hidden"); // Always hide loader, even if there's an error
     }
 }
 function delay(ms) {
