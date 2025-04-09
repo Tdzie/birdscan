@@ -4,7 +4,7 @@ const eBirdApiToken = '377m29pfd648';
 const footer = document.querySelector('#footer');
 myHeaders.append("X-eBirdApiToken", eBirdApiToken);
 var birdList = new BirdList();
-
+var daysAgo = 10;
 
 const requestOptions = {
     method: "GET",
@@ -23,7 +23,7 @@ async function fetchEbirdData(locationId) {
 
         loader.classList.remove("hidden"); // Show "Processing..."
         
-        const response = await fetch(`https://api.ebird.org/v2/data/obs/AL/recent?includeProvisional=true&r=${locationId}`, requestOptions);
+        const response = await fetch(`https://api.ebird.org/v2/data/obs/AL/recent?includeProvisional=true&back=${daysAgo}&r=${locationId}`, requestOptions);
         await delay(300); // Simulate a delay for the loader
         const eBirdData = await response.json();
         

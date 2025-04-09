@@ -6,6 +6,14 @@ const locationData = {
             "id": "L166463,L724996,L725009,L725014,L725012,L724990,L3086944,L923371,L4813791,L883243"
         },
         {
+            "name": "Dauphin Island - East Half",
+            "id": "L724990,L725014,L4813791,L2584608,L4449700,L725012,L1777744,L883243,L166463,L888778"
+        },
+        {
+            "name": "Dauphin Island - West Half",
+            "id": "L724996,L25329309,L5156724,L859480,L3031511,L923371,L795156,L1151027,L3086944,L725009"
+        },
+        {
             "name": "Shell Mound Park",
             "id": "L724996"
         },
@@ -55,11 +63,52 @@ const locationData = {
         },
         {
             "name": "Fort Morgan - All Hotspots",
-            "id": "L165792,L2687357,L1286702,L1032547,L934114,L4061500,L30747785"
+            "id": "L165792,L2687357,L1286702,L1032547,L934114,L4061500,L30747785,L888778"
         },
         {
             "name": "Bellingrath Gardens",
             "id": "L1487156"
+        },
+        {
+            "name": "Campground",
+            "id": "L4449700"
+        },
+        {
+            "name": "Ferry Terminal",
+            "id": "L1777744"
+        },
+        {
+            "name": "Cadillac Square",
+            "id": "L888778"
+        },
+        {
+            "name": "Pelican Bay and Spit",
+            "id": "L25329309"
+
+        },
+        {
+            "name": "Marina",
+            "id": "L5156724"
+        },
+        {
+            "name": "Golf Club",
+            "id": "L1127619"
+        },
+        {
+            "name": "Aloe Bay",
+            "id": "L3031511"
+        },
+        {
+            "name": "Pier",
+            "id": "L795156"
+        },
+        {
+            "name": "Bayou Heron Park",
+            "id": "L1151027"
+        },
+        {
+            "name": "West End",
+            "id": "L859480"
         }
     ],
     "Plum Island": 
