@@ -1,6 +1,7 @@
 const locationData = {
     "Dauphin Island": 
     [
+        
         {
             "name": "Dauphin Island - Top 10 Hotspots",
             "id": "L166463,L724996,L725009,L725014,L725012,L724990,L3086944,L923371,L4813791,L883243"
@@ -84,7 +85,6 @@ const locationData = {
         {
             "name": "Pelican Bay and Spit",
             "id": "L25329309"
-
         },
         {
             "name": "Marina",
@@ -109,6 +109,10 @@ const locationData = {
         {
             "name": "West End",
             "id": "L859480"
+        },
+        {
+            "name": "Dauphin Island - Entire Island - use sparingly",
+            "id": "1"
         }
     ],
     "Plum Island": 
