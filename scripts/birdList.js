@@ -81,17 +81,21 @@ class BirdList {
 
             // Create a clickable link for the bird map
             let customLink = `https://ebird.org/map/${bird.speciesCode}?neg=true&env.minX=${envminX}&env.minY=${envminY}&env.maxX=${envmaxX}&env.maxY=${envmaxY}&zh=true&gp=true&ev=Z&excludeExX=false&excludeExAll=false&mr=1-12&bmo=1&emo=12&yr=cur&byr=2023&eyr=2023#more-map-options`;
-
+            let birdName = bird.name;
             let colorSelect = "black"; // Default color
             // Insert the bird name with the clickable map link and apply styles based on whether the bird was seen
             if (!hasSeen) {
                 colorSelect = "lightblue";
+                birdName += " - C,M,T."
             }else if (maggieAndTimothy) {
                 colorSelect = "orange";
+                birdName += " - M,T."
             }else if (isNeededMaggie) {
-                colorSelect = "purple";
+                colorSelect = "lightpurple";
+                birdName += " - M."
             }else if (isNeededTimothy) {    
                 colorSelect = "lightgreen";
+                birdName += " - T."
             }
 
             birdItem.innerHTML = `
