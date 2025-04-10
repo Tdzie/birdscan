@@ -85,7 +85,7 @@ class BirdList {
             let colorSelect = "black"; // Default color
             // Insert the bird name with the clickable map link and apply styles based on whether the bird was seen
             if (!hasSeen) {
-                colorSelect = "red";
+                colorSelect = "lightblue";
             }else if (maggieAndTimothy) {
                 colorSelect = "orange";
             }else if (isNeededMaggie) {
