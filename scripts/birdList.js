@@ -100,7 +100,7 @@ class BirdList {
 
             birdItem.innerHTML = `
                 <a href="${customLink}" target="_blank" style="text-decoration: none;">
-                    <strong style="color: ${colorSelect}">${bird.name}</strong> <span style="color: black"> - ${bird.howMany}</span>
+                    <strong style="color: ${colorSelect}">${birdName}</strong> <span style="color: black"> - ${bird.howMany}</span>
                 </a>
             `;
 
