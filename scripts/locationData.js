@@ -111,7 +111,7 @@ const locationData = {
             "id": "L859480"
         },
         {
-            "name": "Dauphin Island - Entire Island - use sparingly",
+            "name": "Dauphin Island - Entire Island",
             "id": "1"
         }
     ],
