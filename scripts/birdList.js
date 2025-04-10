@@ -91,7 +91,7 @@ class BirdList {
                 colorSelect = "orange";
                 birdName += " - M,T."
             }else if (isNeededMaggie) {
-                colorSelect = "#BF40BF";
+                colorSelect = "#996CAE";
                 birdName += " - M."
             }else if (isNeededTimothy) {    
                 colorSelect = "lightgreen";
