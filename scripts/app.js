@@ -144,3 +144,7 @@ async function fetchTheIsland(locationSetOne, locationSetTwo, locationSetThree) 
         loader.classList.add("hidden"); // Always hide loader, even if there's an error
     }
 }
+
+function updateDaysAgo(value) {
+    daysAgo = parseInt(value, 10);
+  }

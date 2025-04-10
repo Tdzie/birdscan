@@ -33,6 +33,10 @@ class BirdList {
 
     // Convert the list of seen birds to a Set for faster lookup (with cleaned names)
     const seenBirdsSet = new Set(birdsSeen["Cappa"].map(name => name.trim().toLowerCase()));
+    const birdsNeededSetMaggie = new Set(birdsNeededMaggie.map(name => name.trim().toLowerCase()));
+    const birdsNeededSetTimothy = new Set(birdsNeededTimothy.map(name => name.trim().toLowerCase()));
+
+
 
     // Create elements for each group
     Object.keys(groupedData).forEach((key) => {
@@ -66,7 +70,9 @@ class BirdList {
 
             // Check if the cleaned name exists in the seen birds list
             let hasSeen = seenBirdsSet.has(cleanedBirdName);
-
+            let isNeededMaggie = birdsNeededSetMaggie.has(cleanedBirdName);
+            let isNeededTimothy = birdsNeededSetTimothy.has(cleanedBirdName);
+            let maggieAndTimothy = birdsNeededSetMaggie.has(cleanedBirdName) && birdsNeededSetTimothy.has(cleanedBirdName);
             // Calculate the environment bounds for the bird map link
             let envminX = bird.lng - 0.2;
             let envmaxX = bird.lng + 0.2;
@@ -76,10 +82,21 @@ class BirdList {
             // Create a clickable link for the bird map
             let customLink = `https://ebird.org/map/${bird.speciesCode}?neg=true&env.minX=${envminX}&env.minY=${envminY}&env.maxX=${envmaxX}&env.maxY=${envmaxY}&zh=true&gp=true&ev=Z&excludeExX=false&excludeExAll=false&mr=1-12&bmo=1&emo=12&yr=cur&byr=2023&eyr=2023#more-map-options`;
 
+            let colorSelect = "black"; // Default color
             // Insert the bird name with the clickable map link and apply styles based on whether the bird was seen
+            if (!hasSeen) {
+                colorSelect = "darkred";
+            }else if (maggieAndTimothy) {
+                colorSelect = "orange";
+            }else if (isNeededMaggie) {
+                colorSelect = "purple";
+            }else if (isNeededTimothy) {    
+                colorSelect = "lightgreen";
+            }
+
             birdItem.innerHTML = `
                 <a href="${customLink}" target="_blank" style="text-decoration: none;">
-                    <strong style="color: ${hasSeen ? 'black' : 'darkred'}">${bird.name}</strong> <span style="color: black"> - ${bird.howMany}</span>
+                    <strong style="color: ${colorSelect}">${bird.name}</strong> <span style="color: black"> - ${bird.howMany}</span>
                 </a>
             `;
 

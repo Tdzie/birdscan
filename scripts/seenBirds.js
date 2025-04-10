@@ -317,3 +317,63 @@ const birdsSeen = {
         "Calidris canutus"
     ]
 };
+
+const birdsNeededMaggie = [
+    "Empidonax virescens",
+    "Poecile carolinensis",
+    "Setophaga cerulea",
+    "Setophaga pensylvanica",
+    "Chaetura pelagica",
+    "Aythya ferina",
+    "Contopus virens",
+    "Ardea cinerea",
+    "Pipilo chlorurus",
+    "Aythya fuligula",
+    "Numenius phaeopus",
+    "Calidris fuscicollis",  
+    "Xanthocephalus xanthocephalus",
+]
+
+const birdsNeededTimothy = [
+    "Anser albifrons",
+    "Branta hutchinsii",
+    "Aythya americana",
+    "Bucephala islandica",
+    "Mergus merganser",
+    "Oxyura jamaicensis",
+    "Rallus limicola",
+    "Numenius phaeopus",
+    "Calidris fuscicollis",
+    "Calidris subruficollis",
+    "Calidris melanotos",
+    "Scolopax minor",
+    "Phalaropus lobatus",
+    "Larus glaucoides",
+    "Chlidonias niger",
+    "Fregata magnificens",
+    "Phalacrocorax carbo",
+    "Haliaeetus pelagicus",
+    "Buteo lagopus",
+    "Tyto alba",
+    "Megascops asio",
+    "Bubo virginianus",
+    "Melanerpes erythrocephalus",
+    "Myiopsitta monachus",
+    "Tyrannus forficatus",
+    "Contopus virens",
+    "Empidonax virescens",
+    "Polioptila caerulea",
+    "Myadestes townsendi",
+    "Catharus guttatus",
+    "Ixoreus naevius",
+    "Coccothraustes vespertinus",
+    "Ammodramus savannarum",
+    "Passerella iliaca",
+    "Spizelloides arborea",
+    "Melospiza lincolnii",
+    "Pipilo chlorurus",
+    "Xanthocephalus xanthocephalus",
+    "Euphagus carolinus",
+    "Setophaga cerulea"
+
+]
