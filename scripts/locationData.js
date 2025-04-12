@@ -113,6 +113,10 @@ const locationData = {
         {
             "name": "Dauphin Island - Entire Island",
             "id": "1"
+        },
+        {
+            "name": "All of Mobile"
+            "id": "US-AL-097"
         }
     ],
     "Plum Island": 
