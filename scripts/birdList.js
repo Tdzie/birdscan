@@ -82,6 +82,8 @@ class BirdList {
             // Create a clickable link for the bird map
             let customLink = `https://ebird.org/map/${bird.speciesCode}?neg=true&env.minX=${envminX}&env.minY=${envminY}&env.maxX=${envmaxX}&env.maxY=${envmaxY}&zh=true&gp=true&ev=Z&excludeExX=false&excludeExAll=false&mr=1-12&bmo=1&emo=12&yr=cur&byr=2023&eyr=2023#more-map-options`;
             let birdName = bird.name;
+            let newBird =  (hasSeen || isNeededMaggie || isNeededTimothy);
+            let newBirdChecked = true;
             let colorSelect = "black"; // Default color
             // Insert the bird name with the clickable map link and apply styles based on whether the bird was seen
             if (!hasSeen) {
@@ -103,8 +105,9 @@ class BirdList {
                     <strong style="color: ${colorSelect}">${birdName}</strong> <span style="color: black"> - ${bird.howMany}</span>
                 </a>
             `;
-
-            birdList.appendChild(birdItem);
+            if(newBird && newBirdChecked){
+                birdList.appendChild(birdItem);
+            }
         });
 
         unorderedList.appendChild(section);
