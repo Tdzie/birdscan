@@ -115,7 +115,7 @@ const locationData = {
             "id": "1"
         },
         {
-            "name": "All of Mobile"
+            "name": "All of Mobile",
             "id": "US-AL-097"
         }
     ],
