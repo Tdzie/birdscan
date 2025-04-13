@@ -105,9 +105,9 @@ class BirdList {
                     <strong style="color: ${colorSelect}">${birdName}</strong> <span style="color: black"> - ${bird.howMany}</span>
                 </a>
             `;
-            if(newBird && newBirdChecked){
+            //if(newBird && newBirdChecked){
                 birdList.appendChild(birdItem);
-            }
+            //}
         });
 
         unorderedList.appendChild(section);
