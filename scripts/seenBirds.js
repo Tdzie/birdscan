@@ -2,6 +2,8 @@ const birdsSeen = {
     "Cappa": [
         /* ... Cappa's bird names ... */
         "Colinus virginianus",
+        "Botaurus exilis",
+        "Lonchura punctulata",
         "Columbina inca",
         "Columbina passerina",
         "Ammospiza caudacuta",
