@@ -316,7 +316,8 @@ const birdsSeen = {
         "Petrochelidon pyrrhonota",
         "Tyto furcata",
         "Elanoides forficatus",
-        "Calidris canutus"
+        "Calidris canutus",
+        "Anarhynchus nivosus"
     ]
 };
 
@@ -339,7 +340,6 @@ const birdsNeededMaggie = [
 const birdsNeededTimothy = [
     "Anser albifrons",
     "Branta hutchinsii",
-    "Aythya americana",
     "Bucephala islandica",
     "Mergus merganser",
     "Oxyura jamaicensis",
