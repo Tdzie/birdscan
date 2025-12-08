@@ -336,5 +336,12 @@ const locationData = {
             "id": "L1111208"
         }
     ],
+    "Sax-Zim Bog":
+    [
+        {
+            "name": "Sax-Zim Bog Entire Region",
+            "id": "US-MN-137"
+        }
+    ]
 }
 
