@@ -350,7 +350,7 @@ const locationData = {
             "id": "US-AZ-023"
         },
         {
-            "name": "Pima region"
+            "name": "Pima region",
             "id": "US-AZ-019"
         }
     ]
