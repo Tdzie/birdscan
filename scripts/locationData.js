@@ -349,5 +349,5 @@ const locationData = {
             "name": "Entire region",
             "id": "US-AZ-023"
         }
-    ]
+    }
 
