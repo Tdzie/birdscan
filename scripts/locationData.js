@@ -342,6 +342,12 @@ const locationData = {
             "name": "Sax-Zim Bog Entire Region",
             "id": "US-MN-137"
         }
+    ],
+    "canyon":
+    [
+        {
+            "name": "Entire region",
+            "id": "US-AZ-023"
+        }
     ]
-}
 
