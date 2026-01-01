@@ -343,11 +343,15 @@ const locationData = {
             "id": "US-MN-137"
         }
     ],
-    "canyon":
+    "tuson":
     [
         {
-            "name": "Entire region",
+            "name": "santa cruz region",
             "id": "US-AZ-023"
+        },
+        {
+            "name": "Pima region"
+            "id": "US-AZ-019"
         }
     ]
     }
