@@ -343,7 +343,7 @@ const locationData = {
             "id": "US-MN-137"
         }
     ],
-    "tuson":
+    "tucson":
     [
         {
             "name": "santa cruz region",
