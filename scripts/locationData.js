@@ -352,6 +352,10 @@ const locationData = {
         {
             "name": "Pima region",
             "id": "US-AZ-019"
+        },
+        {
+            "name": "Sweetwater Wetlands",
+            "id": "L208918"
         }
     ]
     }
