@@ -356,6 +356,10 @@ const locationData = {
         {
             "name": "Sweetwater Wetlands",
             "id": "L208918"
+        },
+        {
+            "name": "Picacho Peak",
+            "id": "L344404"
         }
     ]
     }
