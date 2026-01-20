@@ -360,6 +360,12 @@ const locationData = {
         {
             "name": "Picacho Peak",
             "id": "L344404"
+        },
+        {   "name": "Avra Valley",
+            "id": "L211851"
+        },
+        {   "name": "Sabino Park",
+            "id": "L129072"
         }
     ]
     }
