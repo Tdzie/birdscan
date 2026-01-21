@@ -354,6 +354,10 @@
             "id": "US-AZ-019"
         },
         {
+            "name": "Pinal region",
+            "id":"US-AZ-021"
+        },
+        {
             "name": "Sweetwater Wetlands",
             "id": "L208918"
         },
@@ -440,6 +444,10 @@
         {   
             "name": "Santa Gertrudis Lane (foot access only)",
             "id": "L352346"
+        },
+        {   
+            "name": "Agua Caliente Park",
+            "id": "L128870"
         }
     ]
     }
