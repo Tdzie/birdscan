@@ -378,7 +378,7 @@
             "id": "L168765"
         },
         {   
-            "name": "Madera Canyon--Proctor Rd.",
+            "name": "Madera Canyon--Proctor Rd. -- Entrance",
             "id": "L211809"
         },
         {   
@@ -398,7 +398,7 @@
             "id": "L129021"
         },
         {   
-            "name": "Madera Canyon--Santa Rita Lodge",
+            "name": "Madera Canyon--Santa Rita Lodge -- Main Hot Spot",
             "id": "L268114"
         },
         {   
@@ -432,6 +432,14 @@
         {   
             "name": "Madera Canyon--Proctor Rd.",
             "id": "L211809"
+        },
+        {   
+            "name": "Reid Park",
+            "id": "L227274"
+        },
+        {   
+            "name": "Santa Gertrudis Lane (foot access only)",
+            "id": "L352346"
         }
     ]
     }
