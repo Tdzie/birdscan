@@ -361,17 +361,77 @@
             "name": "Picacho Peak",
             "id": "L344404"
         },
-        {   "name": "Avra Valley",
+        {   
+            "name": "Avra Valley",
             "id": "L211851"
         },
-        {   "name": "Sabino Park",
+        {   
+            "name": "Sabino Park",
             "id": "L129072"
         },
-        {   "name": "Paton center for hummingbirds",
+        {   
+            "name": "Paton center for hummingbirds",
             "id": "L247122"
         },
-        {   "name": "white water draw",
+        {   
+            "name": "white water draw",
             "id": "L168765"
+        },
+        {   
+            "name": "Madera Canyon--Proctor Rd.",
+            "id": "L211809"
+        },
+        {   
+            "name": "Proctor Road dispersed campground",
+            "id": "L2194081"
+        },
+        {   
+            "name": "Madera Canyon--Whitehouse Picnic area",
+            "id": "L292553"
+        },
+        {   
+            "name": "Madera Canyon--Pima Co.",
+            "id": "L375967"
+        },
+        {   
+            "name": "Madera Canyon--Madera Picnic Area",
+            "id": "L129021"
+        },
+        {   
+            "name": "Madera Canyon--Santa Rita Lodge",
+            "id": "L268114"
+        },
+        {   
+            "name": "Madera Canyon--Nature Trail (county line/Madera PA to Amphitheater)",
+            "id": "L4580520"
+        },
+        {   
+            "name": "Madera Canyon--Bog Springs campground",
+            "id": "L208039"
+        },
+        {   
+            "name": "Madera Canyon--Amphitheater",
+            "id": "L749724"
+        },
+        {   
+            "name": "Madera Canyon--Madera Kubo B&B",
+            "id": "L296632"
+        },
+        {   
+            "name": "Madera Canyon--Santa Cruz Co.",
+            "id": "L339643"
+        },
+        {   
+            "name": "Madera Canyon--Chuparosa Inn",
+            "id": "L372691"
+        },
+        {   
+            "name": "Madera Canyon--Mt. Wrightson Picnic Area & Upper Canyon Trails",
+            "id": "L296633"
+        },
+        {   
+            "name": "Madera Canyon--Proctor Rd.",
+            "id": "L211809"
         }
     ]
     }
