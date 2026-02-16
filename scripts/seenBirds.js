@@ -1,6 +1,13 @@
 const birdsSeen = {
     "Cappa": [
         /* ... Cappa's bird names ... */
+        "Sphyrapicus nuchalis",
+        "Tyrannus vociferans",
+        "Setophaga nigrescens",
+        "Quiscalus mexicanus",
+        "Sayornis nigricans",
+        "Spinus pinus",
+        "Pyrocephalus rubinus",
         "Pipilo maculatus",
         "Cynanthus latirostris",
         "Dryobates scalaris",
