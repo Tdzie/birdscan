@@ -1,6 +1,15 @@
 const birdsSeen = {
     "Cappa": [
         /* ... Cappa's bird names ... */
+        "Pipilo maculatus",
+        "Cynanthus latirostris",
+        "Dryobates scalaris",
+        "Calypte anna",
+        "Auriparus flaviceps",
+        "Melanerpes uropygialis",
+        "Phainopepla nitens",
+        "Spinus psaltria",
+        "Melozone aberti",
         "Colinus virginianus",
         "Botaurus exilis",
         "Lonchura punctulata",
@@ -358,7 +367,6 @@ const birdsNeededTimothy = [
     "Buteo lagopus",
     "Tyto alba",
     "Megascops asio",
-    "Bubo virginianus",
     "Melanerpes erythrocephalus",
     "Myiopsitta monachus",
     "Tyrannus forficatus",
