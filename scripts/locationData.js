@@ -463,6 +463,34 @@
         { 
             "name": "Cameron region",
             "id": "US-TX-061"
+        },
+        { 
+            "name": "Edinburg Scenic Wetlands WBC",
+            "id": "L249889"
+        },
+        { 
+            "name": "San Juan Wetlands",
+            "id": "L1850000"
+        },
+        { 
+            "name": "McAllen Nature Center",
+            "id": "L421038"
+        },
+        { 
+            "name": "Bentsen-Rio Grande Val",
+            "id": "L128890"
+        },
+        { 
+            "name": "UTRGV Brownsville",
+            "id": "L278450"
+        },
+        { 
+            "name": "National Butterfly Center",
+            "id": "L336009"
+        },
+        { 
+            "name": "Quinta Mazatlan",
+            "id": "L249887"
         }
     ]
     }
