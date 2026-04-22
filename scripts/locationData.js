@@ -491,6 +491,26 @@
         { 
             "name": "Quinta Mazatlan",
             "id": "L249887"
+        },
+        { 
+            "name": "RED - Estero Llano Grande SP",
+            "id": "L259855"
+        },
+        { 
+            "name": "RED - La Feria Nature Center",
+            "id": "L1117422"
+        },
+        { 
+            "name": "RED - Frontera Audubon Center",
+            "id": "L209876"
+        },
+        { 
+            "name": "RED - Valley Nature Center",
+            "id": "L300042"
+        },
+        { 
+            "name": "RED - Santa Ana National Wildlife Refuge",
+            "id": "L209876"
         }
     ]
     }
